@@ -3,8 +3,9 @@ body {
 	background-color: #02010a;
     overflow-x: hidden;
 }
-
 .contenido {
+    -webkit-animation: miSlideIn 1s;
+    animation: miSlideIn 1s;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -207,4 +208,28 @@ p{
         height: 100%;
     }
     
+}
+
+@-webkit-keyframes miSlideIn{
+    0%{
+    margin-top: 150%;
+    }
+    60%{
+    margin-top: -5%;
+    }
+    100%{
+    margin-top: 0%;
+    }
+}
+
+@keyframes miSlideIn {
+    0%{
+    margin-top: 150%;
+    }
+    60%{
+    margin-top: -5%;
+    }
+    100%{
+    margin-top: 0%;
+    }
 }
