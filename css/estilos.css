@@ -1,21 +1,18 @@
 body {
 	font-family: 'Dancing Script', cursive;
 	background-color: #02010a;
+    overflow-x: hidden;
 }
 
 .contenido {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 	position: absolute;
 	top: 0px;
 	margin-left: -450px; /* mitad del ancho maximo*/
 	left: 50%;
-	height: 500px;
-	width: 100%;
-	max-width: 900px;
 	padding: 0;	
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	background-color: white;
 }
 
 .cabecera {
@@ -43,7 +40,7 @@ body {
 	list-style: none;
 }
 .cabecera nav ul li{
-	font-size: 20px;
+	font-size: 19px;
 	display: inline;
 	margin-left: 30px;
 }
@@ -139,4 +136,75 @@ p{
 
 .pie-de-pagina img{
     margin-left: 12px;
+}
+
+@media (max-width:900px){
+    
+    .contenido {
+        width: 100%;
+        top: 0px;
+        margin-left: 0px;
+        left: 0%;
+    }
+    
+    .cabecera {
+        margin-left: 0px;
+        width: 100%;
+        height: 150px;
+    }
+    
+    .cabecera h1 {
+        text-align: center;
+        float: none;
+    }
+
+    .cabecera nav {
+        text-align: center;
+        float: none;
+    }
+    
+    .imagen-central{
+        margin-top: 150px;
+        width: 100%;
+        height: 230px;
+    }
+    
+
+    .imagen-central picture{
+        display: block;
+        position: relative;
+        top: -5%;
+        left: 12.5%;
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    .imagen-central picture img{
+        border-right: 2px solid #02010a;
+        border-bottom: 2px solid #02010a;
+        width: 75%;
+        height: 75%;
+    }
+    .imagenes-secundarias{
+        width: 100%;
+        height: 650px;
+    }
+    
+    .imagenes-secundarias picture img{
+        width: 70%;
+        height: 70%
+    }
+    .columnas{
+        margin-top: 35px;
+        margin-left: 10px;
+    }
+    .pie-de-pagina{
+        height: 100%;
+    }
+    
+    .columna-pie{
+        margin-top: 1px;
+        height: 100%;
+    }
+    
 }
